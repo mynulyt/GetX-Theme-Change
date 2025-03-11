@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:getx_thems/route.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class RoutePage2 extends StatefulWidget {
+  const RoutePage2({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<RoutePage2> createState() => _RoutePageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _RoutePageState extends State<RoutePage2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text("GetX Class")),
+        title: const Center(child: Text("Navigate the page 2")),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -24,11 +23,11 @@ class _HomeScreenState extends State<HomeScreen> {
           Center(
               child: TextButton(
                   onPressed: () {
-                    Get.to(const RoutePage());
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) => RoutePage()));
+                    Get.back();
+                    Get.back();
+                    // Navigator.pop(context);
                   },
-                  child: const Text("Go to next page"))),
+                  child: const Text("Go Back Home"))),
         ],
       ),
     );
